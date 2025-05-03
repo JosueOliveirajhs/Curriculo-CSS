@@ -1,0 +1,142 @@
+:root {
+    --cor1: #F5EEDC;
+    --cor2: #27548A;
+    --cor3: #183B4E;
+    --cor4: #DDA853;
+    --corBranca: #FFFFFF;
+    --corPreta: #080a13;
+    --corCinza: #808080;
+}
+.col-4{
+    text-align: center;
+}
+.col-8{
+    text-align: center;
+}
+
+body {
+    background: #cacfd6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--corPreta);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+img.foto {
+    width: 20em;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 1em 0;
+    opacity: 90%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--cor3);
+    margin-top: 0.5em;
+}
+
+dd {
+    margin-left: 2em;
+    margin-bottom: 1em;
+}
+
+.texto-justificado {
+    text-align: justify;
+    max-width: 900px;
+    margin: auto;
+}
+
+.topBcgSobre,
+.topBcgFormacao,
+.topBcgExperiencia,
+.topBcgHabilidades,
+.topBcgContato,
+.topBcgEndereco {
+    background-color: var(--cor2);
+    color: var(--corBranca);
+    font-weight: bold;
+    padding: 0.3em 1em;
+    border-radius: 8px;
+    display: inline-block;
+    margin-bottom: 0.5em;
+}
+
+.topBcgSobre { width: 2.5rem; }
+.topBcgFormacao { width: 5.5rem; }
+.topBcgExperiencia { width: 15.5rem; }
+.topBcgHabilidades { width: 6.8rem; }
+.topBcgContato { width: 4rem; }
+.topBcgEndereco { width: 5rem; }
+
+.hrCurriculo {
+    background-color: var(--cor3);
+    height: 2px;
+    border: none;
+    margin: 1em 0;
+}
+.Links{
+    color: #f00a0a;
+    text-decoration: none;
+    margin-left: 3rem;
+}
+.Links:hover{
+    color: #441818;
+}
+footer {
+    color: var(--cor1);
+    padding: 1em 1em;
+    text-align: center;
+    background-color: var(--cor3);
+    font-size: 0.9em;
+    border-top: 1px solid var(--cor3);
+}
+
+a.menuJosue {
+    color: var(--corBranca);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1em;
+    padding: 0.6em 1em;
+    border-radius: 0.5em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: var(--cor3);
+    display: inline-block;
+    margin: 0.3em;
+}
+
+a.menuJosue:hover {
+    color: #3d72b3;
+}
+
+th.curriculo {
+    background-color: var(--cor2);
+    color: var(--corBranca);
+    padding: 0.75em;
+    text-align: center;
+    font-weight: bold;
+}
+
+th.largo20 { width: 20%; }
+th.largo10 { width: 10%; }
+
+#menuJosue {
+    background-color: var(--cor3);
+    padding: 1em;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+#sobre,
+#formacao,
+#experiencia,
+#habilidades,
+#contato,
+#endereco {
+    scroll-margin-top: 100px;
+    padding: 1em;
+    max-width: 1000px;
+    margin: auto;
+}
