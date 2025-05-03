@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="curriculo.css">
     <script src="js/bootstrap.bundle.min.js"></script>
     <link rel="icon" href="imgs/5072860.png" type="image/png">
@@ -45,6 +44,16 @@
                     Sou desenvolvedor front-end com foco em HTML, CSS, JavaScript, React e MySQL. Tenho formação técnica pelo Mediotec SENAC (2022–2024) e atualmente curso Análise e Desenvolvimento de Sistemas na Faculdade SENAC (2025–2026). Tenho experiência em projetos integradores como o ArtConnect, que ficou no top 10 do Demoday da Startup Way, e participei da Residência Banco do Brasil, desenvolvendo uma dashboard gamificada.
                 </p>
             </div>
+            <dl>
+                <p><strong>Contato:</strong></p>
+                <dd><b>Telefone:</b> <a href="tel:+5581995088655">+55 81 99508-8655</a></dd>
+                <dd><b>Email:</b> <a href="mailto:jhstrabalhos@gmail.com">jhstrabalhos@gmail.com</a></dd>
+            </dl>
+            <br>
+                <div class="text-center">
+                    <a href="https://github.com/JosueOliveirajhs" target="_blank" class="Links">GitHub</a>
+                    <a href="https://www.linkedin.com/feed/" target="_blank" class="Links">Linkedin</a>
+                </div>
         </div>
 
         <div class="card my-2 hrCurriculo"></div>
@@ -117,17 +126,134 @@
         <div id="contato">
             <h2>Contato</h2>
             <div class="card topBcgContato my-2"></div>
-            <dl>
-                <dd><b>Telefone:</b> <a href="tel:+5581995088655">+55 81 99508-8655</a></dd>
-                <dd><b>Email:</b> <a href="mailto:jhstrabalhos@gmail.com">jhstrabalhos@gmail.com</a></dd>
-            </dl>
-            <br>
-                <div class="text-center">
-                    <a href="https://github.com/JosueOliveirajhs" target="_blank" class="Links">GitHub</a>
-                    <a href="https://www.linkedin.com/feed/" target="_blank" class="Links">Linkedin</a>
-                </div>
-            </p>
-        </div>
+            <div class="container">
+              <p>Fico feliz em trocar ideias ou contribuir com novos projetos. Entre em contato e vamos conversar!</p>
+              <div class="container">
+                <form action="#" method="post" enctype="multipart/form-data" onsubmit="return validarFormulario()">
+                  <fieldset>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <label for="nome" class="form-label"><strong>Nome</strong></label>
+                        <input type="text" class="form-control" id="nome" name="nome" placeholder="Informe seu nome" required>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="sobrenome" class="form-label"><strong>Sobrenome</strong></label>
+                        <input type="text" class="form-control" id="sobrenome" name="sobrenome" placeholder="Informe seu sobrenome" required>
+                      </div>
+                    </div>
+                    <div class="row my-2">
+                      <div class="col-md-6">
+                        <label for="telefone" class="form-label"><strong>Telefone</strong></label>
+                        <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="(99)99999-9999" pattern="\([0-9]{2}\)[0-9]{5}-[0-9]{4}" required>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="email" class="form-label"><strong>Email</strong></label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="seu@email.com" required>
+                      </div>
+                    </div>
+                    <div class="row my-2">
+                      <div class="col-md-6">
+                        <label for="idioma" class="form-label"><strong>Idioma aplicado</strong></label>
+                        <select class="form-select" name="idioma" id="idioma" required>
+                          <option disabled selected>Escolha uma opção</option>
+                          <option>Português (pt-br)</option>
+                          <option>Inglês</option>
+                          <option>Espanhol</option>
+                          <option>Francês</option>
+                        </select>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="arquivo" class="form-label"><strong>Enviar protótipo (PDF, DOC, DOCX, JPEG, PNG)</strong></label>
+                        <input type="file" class="form-control" id="arquivo" name="arquivo" accept=".pdf,.doc,.docx,.jpeg,.jpg,.png">
+                      </div>
+                    </div>
+                    <div class="row my-2">
+                      <div class="col-md-12">
+                        <label for="linguagens" class="form-label"><strong>Linguagens preferidas</strong></label>
+                        <select multiple class="form-select" id="linguagens" name="linguagens[]">
+                          <option>HTML</option>
+                          <option>CSS</option>
+                          <option>JavaScript</option>
+                          <option>Python</option>
+                          <option>Java</option>
+                          <option>C#</option>
+                        </select>
+                        <small class="form-text text-muted">Use Ctrl (ou Cmd) para selecionar várias opções.</small>
+                      </div>
+                    </div>
+                    <div class="row my-2">
+                      <div class="col-md-12">
+                        <p><strong>Banco de dados recomendado:</strong></p>
+                        <div>
+                          <input type="radio" name="banco" id="mysql" value="MySQL" required>
+                          <label for="mysql">MySQL</label>
+                        </div>
+                        <div>
+                          <input type="radio" name="banco" id="postgres" value="PostgreSQL">
+                          <label for="postgres">PostgreSQL</label>
+                        </div>
+                        <div>
+                          <input type="radio" name="banco" id="mongo" value="MongoDB">
+                          <label for="mongo">MongoDB</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row my-2">
+                      <div class="col-md-6">
+                        <label for="turno" class="form-label"><strong>Turno de preferência</strong></label>
+                        <select class="form-select" id="turno" name="turno" required>
+                          <option selected disabled>Escolha um turno</option>
+                          <option>Manhã</option>
+                          <option>Tarde</option>
+                          <option>Noite</option>
+                        </select>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="horario" class="form-label"><strong>Melhor horário</strong></label>
+                        <input type="time" class="form-control" id="horario" name="horario">
+                      </div>
+                    </div>
+                    <div class="row my-2">
+                      <div class="col-md-6">
+                        <label for="previsao" class="form-label"><strong>Previsão de entrega</strong></label>
+                        <input type="date" class="form-control" id="previsao" name="previsao">
+                      </div>
+          
+                      <div class="col-md-6">
+                        <label for="momentoReuniao" class="form-label"><strong>Data/Hora da nossa Conversa</strong></label>
+                        <input type="datetime-local" class="form-control" id="momentoReuniao" name="momentoReuniao">
+                      </div>
+                    </div>
+                    <div class="row my-2">
+                      <div class="col-md-12">
+                        <label for="presencialRemoto" class="form-label"><strong>Preferência</strong></label>
+                        <select class="form-select" name="presencialRemoto" id="presencialRemoto">
+                          <option selected disabled>Escolha uma opção</option>
+                          <option value="presencial">Presencial</option>
+                          <option value="remoto">Remoto</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="row my-2">
+                      <div class="col-12">
+                        <label for="mensagem" class="form-label"><strong>Mensagem</strong></label>
+                        <textarea style="height: 200px;" class="form-control" id="mensagem" name="mensagem" placeholder="Conte sua história" required></textarea>
+                      </div>
+                    </div>
+                    <div class="row m-3">
+                      <div class="col-auto">
+                        <input type="reset" value="Limpar" class="btn btn-secondary">
+                      </div>
+                      <div class="col-auto">
+                        <input type="submit" value="Enviar" class="btn btn-primary">
+                      </div>
+                    </div>
+                  </fieldset>
+                </form>
+              </div>
+            </div>
+          </div>
+          
 
         <div class="card my-2 hrCurriculo"></div>
 
